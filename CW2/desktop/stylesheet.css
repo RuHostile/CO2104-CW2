@@ -1,0 +1,54 @@
+.fb-container{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   margin: 5px;
+   border: 3px solid black;
+}
+
+.fb-item{
+   width: 400px;
+   margin: 10px;
+   border: 3px solid #333;
+   background-color: #dfdfdf;
+}
+
+.fb-item-left{ 
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+
+   border: 3px solid blue;
+}
+
+.fb-item-right{ 
+   border: 3px solid red;
+
+   min-height: 200px;
+
+}
+
+.fb-item-1{ 
+   border: 3px solid green;
+   min-height: 300px;
+
+}
+.fb-item-2{ 
+   border: 3px solid green;
+
+   min-height: 300px;
+
+}
+.fb-item-3{ 
+   border: 3px solid green;
+
+   min-height: 300px;
+
+}
+
+.form-group{
+   position: static;
+   align-items: center;
+}
+
