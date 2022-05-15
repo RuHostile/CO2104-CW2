@@ -10,6 +10,8 @@
    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(images/pexels-pixabay-268533.jpg);
    background-size: cover;
    background-position: center;
+   align-items: center;
+
 }
 
 .navbar{
@@ -31,7 +33,7 @@
    list-style: none;
    display: inline-block;
    margin: 0 20px;
-   position: relative;;
+   position: relative;
 }
 
 .navbar ul li a{

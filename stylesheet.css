@@ -1,54 +1,68 @@
-.fb-container{
-   display: flex;
-   flex-wrap: wrap;
-   justify-content: center;
-   align-items: center;
-   margin: 5px;
-   border: 3px solid black;
-}
+* {box-sizing: border-box}
 
-.fb-item{
-   width: 400px;
-   margin: 10px;
-   border: 3px solid #333;
-   background-color: #dfdfdf;
-}
-
-.fb-item-left{ 
-   flex-wrap: wrap;
-   justify-content: center;
-   align-items: center;
-
-   border: 3px solid blue;
-}
-
-.fb-item-right{ 
-   border: 3px solid red;
-
-   min-height: 200px;
+/* Add padding to containers */
+.register-container {
+   width: 720px;
+   height: 800;
+   align-self: center;
+   padding: 5px;
+   margin: auto;
+   background-color: #009688;
+   border-radius: 3px;
 
 }
 
-.fb-item-1{ 
-   border: 3px solid green;
-   min-height: 300px;
-
+.register-container h1 {
+   text-align: center;
 }
-.fb-item-2{ 
-   border: 3px solid green;
-
-   min-height: 300px;
-
-}
-.fb-item-3{ 
-   border: 3px solid green;
-
-   min-height: 300px;
-
+.register-container p{
+   text-align: center;
 }
 
-.form-group{
-   position: static;
-   align-items: center;
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
 }
 
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+  opacity:1;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
