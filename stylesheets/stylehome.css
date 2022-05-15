@@ -1,0 +1,57 @@
+*{
+   margin: 0px;
+   padding: 0;
+   font-family: sans-serif;
+}
+
+.home-container{
+   flex-wrap: wrap;
+   width: 100%;
+	height: 100vh;
+   background-size: cover;
+   background-position: center;
+   align-items: center;
+   background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../images/kristof-korody-bjV-7zfKF1g-unsplash.jpg);
+}
+
+.nav-container nav ul {
+	list-style-type: none;
+	padding: 0;
+   transform: translateY(100%);
+}
+
+.nav-container nav a {
+   display: block;
+   width: 200px;
+   padding: 15px;
+   border-radius: 25px;
+   font-weight: bold;
+   margin-bottom: 20px;
+   border: 2px solid #009688;
+   background: transparent;
+   color: #fff;
+   cursor: pointer;
+   position: relative;
+   overflow: hidden;
+}
+
+.nav-container nav span {
+   background: #009688;
+   height: 100%;
+   width: 0;
+   text-align: center;
+   border-radius: 25px;
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   z-index: -1;
+   transition: 0.5s;
+}
+
+.nav-container nav a:hover span {
+   width: 100%;
+}
+
+.tasks-container p {
+   color: #fff;
+}
