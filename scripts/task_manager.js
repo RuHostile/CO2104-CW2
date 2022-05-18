@@ -2,6 +2,10 @@ function goHome() {
    window.location.href = "home.html";
 }
 
+function goToTaskManager() {
+   window.location.href = "index-2.html";
+}
+
 window.addEventListener('load', () => {
 	const form = document.querySelector("#new-task-form");
 	const input = document.querySelector("#new-task-input");
