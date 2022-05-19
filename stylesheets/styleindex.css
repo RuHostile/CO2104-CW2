@@ -338,3 +338,22 @@ body {font-family: Verdana, sans-serif;}
   background: #1abc9c;
   color: white !important
 }
+
+.home-container {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   
+   border: 3px solid #6B7280;
+}
+
+.home-container .events {
+   display: flex;
+}
+
+.home-container ul li{
+   list-style: none;
+   display: inline-block;
+   margin: 0 20px;
+   position: relative;
+}
