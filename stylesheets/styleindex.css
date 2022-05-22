@@ -11,6 +11,7 @@
    background-size: cover;
    background-position: center;
    align-items: center;
+   position: relative;
 
 }
 
@@ -339,21 +340,31 @@ body {font-family: Verdana, sans-serif;}
   color: white !important
 }
 
-.home-container {
-   display: flex;
-   flex-direction: row;
-   flex-wrap: wrap;
-   
-   border: 3px solid #6B7280;
+.home-container {   
+   text-align: center;
+   position: relative;
+   margin: auto;
+   width: 50%;
+   border: 3px solid green;
+   padding: 10px;
 }
 
 .home-container .events {
-   display: flex;
 }
 
 .home-container ul li{
-   list-style: none;
-   display: inline-block;
-   margin: 0 20px;
    position: relative;
+   border: 3px solid red;
+   margin: 20px 20px;
+   display: flex;
+   flex-direction: row;
+   width: 400px;
+	background-color: var(--darkest);
+   border-radius: 25px;
+   color: var(--grey );
+}
+.home-img{
+   width: 120px;
+   cursor: pointer;
+   border-radius: 25px;
 }
