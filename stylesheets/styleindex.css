@@ -145,7 +145,7 @@ header h1{
 }
 
 #new-task-form {
-	display: flex;;
+	display: flex;
 }
 
 input, button {
@@ -339,32 +339,80 @@ body {font-family: Verdana, sans-serif;}
   background: #1abc9c;
   color: white !important
 }
-
-.home-container {   
-   text-align: center;
-   position: relative;
-   margin: auto;
-   width: 50%;
-   border: 3px solid green;
-   padding: 10px;
+.home-container {
+   transform: translateX(0);
+   border: black 5px solid;
 }
-
-.home-container .events {
-}
-
-.home-container ul li{
-   position: relative;
-   border: 3px solid red;
-   margin: 20px 20px;
+.home-container ul{
    display: flex;
-   flex-direction: row;
-   width: 400px;
-	background-color: var(--darkest);
-   border-radius: 25px;
-   color: var(--grey );
+   
 }
+.home-container ul li {
+   width: 400px;
+   display: flex;
+   align-items: center;
+   background-color: var(--darkest);
+   margin-left: 50px;
+   border-radius: 25px;
+
+}
+.home-container ul li p{
+   font-family: Arial, Helvetica, sans-serif;
+   font-size: 25px;
+   margin-left: 10px;
+
+}
+
 .home-img{
    width: 120px;
    cursor: pointer;
    border-radius: 25px;
 }
+
+.event-task-manager {
+   margin: 10px 100px;
+}
+
+.event-task-manager input{
+   background-color: white;
+}
+
+.event-task-manager button{
+   background-color: white;
+}
+
+.event-task-manager .taskDiv {
+   border: none;
+   display: flex;
+}
+
+.event-task-manager .taskDiv div {
+   margin: 10px;
+   border: white 1px solid;
+   background-color: var(--darker);
+
+}
+
+.event-task-manager .taskDiv div:hover {
+   content: "";
+   margin: 10px;
+   border: var(--dark) 1px solid;
+   background-color: var(--dark);
+   color: #666;
+   text-decoration: line-through;
+   transition: 0.5s;
+
+}
+
+
+/*
+.event-task-manager h2{
+   color: white;
+   font-size: 20px;
+}
+
+.event-task-manager p{
+   color: white;
+   font-size: 10px;
+}
+*/
