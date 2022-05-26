@@ -6,6 +6,10 @@ function goToTaskManager() {
    window.location.href = "index-2.html";
 }
 
+function goToLogin() {
+	window.location.href = "login.html"
+}
+
 window.addEventListener('load', () => {
 	const form = document.querySelector("#new-task-form");
 	const input = document.querySelector("#new-task-input");
