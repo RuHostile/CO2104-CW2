@@ -203,6 +203,7 @@ main {
    padding: 10px 15px;
    margin: 30px 0px;
 
+
 }
 .event-task-manager input:focus{
    border-bottom:1px solid #ddd;
@@ -457,9 +458,7 @@ main {
    border: white solid 1px;
 }
 
-.event-notes-header{ 
 
-}
 
 .event-notes-header .event-notes-image {
    width: 300px;
@@ -487,15 +486,17 @@ main {
    font-weight: 400;
 }
 
-.event-notes-content {
+.event-notes-content *{
    padding-left: 200px;
    padding-right: 200px;
+   margin: 5px;
 }
 
 
 
 .event-notes-content button{
-
+   margin-left: 200px;
+   padding-right: 200px;
 
    width: 190px;
    padding: 2px;
