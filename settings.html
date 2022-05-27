@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Settings</title>
+   <link rel="stylesheet" href="stylesheets/styleindex.css">
+
+   <script src="scripts/task_manager.js"></script>
+</head>
+<body>
+   
+   <div class="banner">
+      <div class="navbar">
+         <img src="images/Vinaki Logo 03.jpg" class="logo">
+         <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="settings.html">Settings</a></li>
+          <li><a href="index.html">Log out</a></li>
+         </ul>
+      </div>
+      
+      <div class="tasks-container">
+        <header>
+          <h1>Settings</h1>
+
+        </header>
+        <div class="settings-container">
+          <h2>My account</h2>
+          <h4>Photo</h3>
+          <img src="/images/person-placeholder.jpg" class="pfp">
+          <br>
+          <button>Upload photo</button>
+          <hr>
+          <h2>Personal info</h2>
+          <h4>Email : db470@student.le.ac.uk</h4>     
+          <h4>Username : DanteB</h4>
+          <h4>Password :<Button>Change password</Button></h4>
+          
+          <hr>
+
+          <h2>My notifications</h2>
+          <div class="setting-notifications">
+            
+            <input type="radio" id="n1" name="n1" >
+            <label for="n1"> Mobile push notification</label><br>
+            
+            <input type="radio" id="n2" name="n2" >
+            <label for="n2"> Desktop push notification</label><br>
+            
+            <input type="radio" id="n3" name="n3" >
+            <label for="n3"> Email notifications</label><br>
+            
+            <input type="radio" id="n4" name="n4" >
+            <label for="n4"> Always send email notifications</label><br>
+          </div>
+          <hr>
+
+          <h2>My appearance</h2>
+          <label for="Theme">Theme:</label>
+          <select name="Theme" id="Theme">
+            <option value="dark">Dark</option>
+            <option value="light">Light</option>
+            <option value="custom">Custom</option>
+            <option value="use system setting">Use system setting</option>
+          </select> <br>
+          <label for="open">Open on start:</label>
+          <select name="open" id="open">
+            <option value="home">Home page</option>
+            <option value="last">Last visited page</option>
+          </select> <br>
+          <label for="Cookies">Cookies settings:</label>
+          <select name="Cookies" id="Cookies">
+            <option value="custom">Custom</option>
+            <option value="marketing">Marketing</option>
+            <option value="analytics">Analytics</option>
+          </select> <br> 
+          <hr>
+
+          <h2>Language and region</h2>
+          <label for="language">Language:</label>
+          <select name="language" id="language">
+            <option value="eng">English (Engligh US)</option>
+            <option value="fra">Français (French)</option>
+            <option value="kor">한국어 (Korean)</option>
+            <option value="jap">日本語 (Japanese)</option>
+
+          </select> <br> 
+          <label for="week">Start week on:</label>
+          <select name="week" id="week">
+            <option value="sun">Sunday</option>
+            <option value="mon">Monday</option>
+          </select> <br> 
+          <hr>
+
+          <h4>Logout : <button>Logout</button></h4>
+          <h4>Danger zone : <button>Delete account</button></h4>
+
+        </div>
+        
+       </div>
+   </div>
+
+</body>
+</html>

@@ -1,62 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Calendar</title>
-   <link rel="stylesheet" href="stylesheets/styleindex.css">
+<meta charset='utf-8' />
+<title>Calendar</title>
 
-   <script src="scripts/task_manager.js"></script>
+<link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.css' rel='stylesheet'/>
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.js'></script>
+
+
+<script>
+ document.addEventListener('DOMContentLoaded', function() {
+ var calendarEl = document.getElementById('calendar');
+ var calendar = new FullCalendar.Calendar(calendarEl, {
+ initialDate: '2022-05-01',
+ editable: true,
+ selectable: true,
+ businessHours: true,
+ dayMaxEvents: true,
+ events: [
+ {
+ title: "Mom's B-Day",
+ start: '2022-05-03',
+ url: "Mom's B-Day \n Start: 2022-05-03"
+ },
+ {
+ title: 'Flight to back home',
+ start: '2022-05-07',
+ end: '2022-05-09',
+ url: "Flight to back home \n Start: 2022-05-07 \n End: 2022-05-09"
+
+ },
+ {
+ title: "Brother's Wedding",
+ start: '2022-05-12T10:30:00',
+ end: '2022-05-12T12:30:00',
+ url: "Brother's Wedding"
+ },
+ {
+ title: 'Lunch',
+ start: '2022-05-29T12:00:00'
+ },
+ {
+ title: 'Lunch',
+ start: '2022-05-30T12:00:00'
+ },
+ {
+ title: 'Lunch',
+ start: '2022-05-31T12:00:00'
+ },
+ {
+ title: 'Study',
+ start: '2022-05-30T13:00:00',
+ end: '2022-05-30T14:00:00'
+ },
+ {
+ title: 'Study',
+ start: '2022-05-31T13:00:00',
+ end: '2022-05-31T14:00:00'
+ },
+ 
+ ], eventClick: function(info) {
+ info.jsEvent.preventDefault();
+ if (info.event.url) {
+ alert(info.event.url);
+ //window.open(info.event.url);
+ }
+ }
+ });
+ calendar.render();
+ });
+</script>
 </head>
 <body>
-   
+<link rel="stylesheet" href="stylesheets/styleindex.css">
    <div class="banner">
       <div class="navbar">
          <img src="images/Vinaki Logo 03.jpg" class="logo">
          <ul>
             <li><a href="home.html">Home</a></li>
             <li><a href="calendar.html">Calendar</a></li>
-            <li><a href="index-2.html">Add Task</a></li>
-            <li><a href="delete.html">Delete Task</a></li>
-            <li><a href="login.html">Log out</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="index.html">Log out</a></li>
          </ul>
       </div>
-      <div class="calendar">
-         <div class="month">
-            <ul>
-              <li class="prev">&#10094;</li>
-              <li class="next">&#10095;</li>
-              <li>August<br><span style="font-size:18px">2021</span></li>
-            </ul>
-          </div>
-          
-          <ul class="weekdays">
-            <li>Mo</li>
-            <li>Tu</li>
-            <li>We</li>
-            <li>Th</li>
-            <li>Fr</li>
-            <li>Sa</li>
-            <li>Su</li>
-          </ul>
-          
-          <ul class="days">
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>7</li>
-            <li>8</li>
-            <li>9</li>
-            <li><span class="active">10</span></li>
-            <li>11</li>
-            ...etc
-          </ul>
-      </div>
-   </div>
-
+      <header>
+        <h1>Calendar</h1>
+      </header>
+ <div id='calendar'></div>
 </body>
 </html>

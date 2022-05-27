@@ -10,65 +10,88 @@ function goToLogin() {
 	window.location.href = "login.html"
 }
 
-window.addEventListener('load', () => {
-	const form = document.querySelector("#new-task-form");
-	const input = document.querySelector("#new-task-input");
-	const list_el = document.querySelector("#tasks");
+//DOM elements
+const taskForm = document.getElementById("taskForm");
+const taskContainer = document.querySelector(".taskDiv");
 
-	form.addEventListener('submit', (e) => {
-		e.preventDefault();
+const nameInput = taskForm["name"];
+const timeStartInput = taskForm['start'];
+const timeEndInput = taskForm['end'];
+const dateInput = taskForm['date']
 
-		const task = input.value;
+const tasks = JSON.parse(localStorage.getItem("tasks")) || []
 
-		const task_el = document.createElement('div');
-		task_el.classList.add('task');
+const addTask = (name, start,end, date) => {
+   tasks.push({
+      name,
+      start,
+      end,
+      date
+   });
 
-		const task_content_el = document.createElement('div');
-		task_content_el.classList.add('content');
 
-		task_el.appendChild(task_content_el);
+   localStorage.setItem("tasks", JSON.stringify(tasks));
 
-		const task_input_el = document.createElement('input');
-		task_input_el.classList.add('text');
-		task_input_el.type = 'text';
-		task_input_el.value = task;
-		task_input_el.setAttribute('readonly', 'readonly');
+   return {name, start, end, date}; 
+};
 
-		task_content_el.appendChild(task_input_el);
+const delTask = (name) => {
 
-		const task_actions_el = document.createElement('div');
-		task_actions_el.classList.add('actions');
-		
-		const task_edit_el = document.createElement('button');
-		task_edit_el.classList.add('edit');
-		task_edit_el.innerText = 'Edit';
+}
 
-		const task_delete_el = document.createElement('button');
-		task_delete_el.classList.add('delete');
-		task_delete_el.innerText = 'Delete';
+const createTaskElement = ({name, start, end, date}) => {
 
-		task_actions_el.appendChild(task_edit_el);
-		task_actions_el.appendChild(task_delete_el);
+   //Create elements
+   const taskDiv = document.createElement("div");
+   taskDiv.className = "strikethrough"
+   const taskName = document.createElement("h2");
+   taskName.className = "strikethrough"
+   const taskStart = document.createElement("p");
+   taskStart.className = "strikethrough"
+   const taskEnd = document.createElement("p");
+   taskEnd.className = "strikethrough"
+   const taskDate = document.createElement("p");
+   taskDate.className = "strikethrough"
+   const taskFinishText = document.createElement("p");
+   taskFinishText.className = "strikethrough"
+   const taskFinish = document.createElement("input");
+   taskFinish.setAttribute("type", "checkbox");
 
-		task_el.appendChild(task_actions_el);
+   // Fill the content
+   taskName.innerText = name;
+   taskStart.innerText = "Start: " + start;
+   taskEnd.innerText = "End: " + end;
+   taskDate.innerText = "Date: " + date;
+   taskFinishText.innerText = "Finished?"
 
-		list_el.appendChild(task_el);
 
-		input.value = '';
+   // Add to the DOM
+   taskDiv.append(taskName, taskStart, taskEnd, taskDate,taskFinishText, taskFinish);
+   taskContainer.appendChild(taskDiv);
 
-		task_edit_el.addEventListener('click', (e) => {
-			if (task_edit_el.innerText.toLowerCase() == "edit") {
-				task_edit_el.innerText = "Save";
-				task_input_el.removeAttribute("readonly");
-				task_input_el.focus();
-			} else {
-				task_edit_el.innerText = "Edit";
-				task_input_el.setAttribute("readonly", "readonly");
-			}
-		});
+};
 
-		task_delete_el.addEventListener('click', (e) => {
-			list_el.removeChild(task_el);
-		});
-	});
-});
+tasks.forEach(createTaskElement);
+
+taskForm.onsubmit = e => {
+   e.preventDefault();
+
+   const newTask = addTask(
+      nameInput.value,
+      timeStartInput.value,
+      timeEndInput.value,
+      dateInput.value
+   );
+
+   createTaskElement(newTask)
+
+   nameInput.value = "";
+   timeStartInput.value = "";
+   timeEndInput.value = "";
+   dateInput.value = "";
+
+};
+
+taskContainer.addEventListener('click', () => {
+   
+})

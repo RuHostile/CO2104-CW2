@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Home</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -18,36 +18,74 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="stylesheets/styleindex.css">
-    <script src="scripts/task_manager.js"></script>
 
     <div class="banner">
       <div class="navbar">
          <img src="images/Vinaki Logo 03.jpg" class="logo">
          <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="calendar.html">Calendar</a></li>
-            <li><a href="index-2.html">Add Task</a></li>
-            <li><a href="delete.html">Delete Task</a></li>
-            <li><a href="login.html">Log out</a></li>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="calendar.html">Calendar</a></li>
+          <li><a href="settings.html">Settings</a></li>
+          <li><a href="index.html">Log out</a></li>
          </ul>
       </div>
       <header>
-        <h1>Scheduled Events</h1>
+        <h1>Home</h1>
       </header>
    
       <div class="home-container">
         <ul>
-          <li> <img src="images/1255378-800w.jpg" class="home-img"> <p>Dance</p></li>
-          <li> <img src="images/andrii-kordis-JjjojrhbXFo-unsplash.jpg" class="home-img"> <p>Diet</p></li>
-          <li> <img src="images/1200px-Yandhi_Cover_Art_(Free_License).jpg" class="home-img"><p>Music</p></li>
-          <li> <img src="images/images-removebg-preview.png" class="home-img"><p>Add new milestone</p></li>
+          <a href="gym.html"><li> <img src="images/1255378-800w.jpg" class="home-img"><p>Gym</p> </li> </a>
+          <a href="diet.html"><li> <img src="images/andrii-kordis-JjjojrhbXFo-unsplash.jpg" class="home-img"> <p>Diet</p></li></a>
+          <a href="music.html"><li> <img src="images/1200px-Yandhi_Cover_Art_(Free_License).jpg" class="home-img"><p>Music</p></li></a>
+          <a href="addnewevent.html"><li> <img src="images/images-removebg-preview.png" class="home-img"><p>Add new event</p></li></a>
 
         </ul>
-
-
       </div>
         <div class="event-task-manager">
-          
+          <h1>Todays Tasks</h1>
+
+          <form id="taskForm" action="">
+
+                        <!-- Task js name  -->
+            <input type="text" name="name" placeholder="Task Name" required>
+
+            <div class="c-start">
+              <span>Start Time : </span> 
+              <div class="ddc-start">
+                <p>Please enter a start time eg: "02:30:PM"</p>
+              </div>
+            </div> 
+
+            <!-- Task js start time -->
+            <input type="time" name="start" placeholder="Task Start Time" required>
+
+            <div class="c-end">
+              <span>End Time : </span>
+              <div class="ddc-end">
+                <p>Please enter a end time eg: "09:00:PM"</p>
+              </div>
+            </div>
+            
+            <!-- Task js end time -->
+            <input type="time" name="end" placeholder="Task End Time" >
+
+            <div class="c-date">
+              <span>Date : </span>
+              <div class="ddc-date">
+                <p>Please enter a date eg: "05/04/2012"</p>
+              </div>
+            </div>
+            
+            <!-- task js date -->
+            <input type="date" name="date" placeholder="Task Date" required>
+
+            <!-- task button submit -->
+            <button><span></span>Add Task  </button>
+
+          </form>
+
+          <div class="taskDiv"></div>
 
         </div>
 
@@ -55,4 +93,6 @@
     
 
 </body>
+<script src="scripts/task_manager.js"></script>
+
 </html>
